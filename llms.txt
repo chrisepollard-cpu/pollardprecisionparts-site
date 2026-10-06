@@ -1,0 +1,9 @@
+# Pollard's Precision Parts
+
+> Custom 3D-printed replacement, discontinued, and hard-to-find parts, made by Chris Pollard in a Llano, Texas (Hill Country) workshop. Materials: PLA, PETG, ASA, TPU. Not for load-bearing, electrical, stove, or child-safety parts.
+
+- [Home](https://pollardprecisionparts.com/): what gets made
+- [Services](https://pollardprecisionparts.com/services.html): how orders work and materials
+- [Contact](https://pollardprecisionparts.com/contact.html): pollardprecisionparts@gmail.com
+
+Requests by email: pollardprecisionparts@gmail.com. Include a photo, the make/model it fits, rough measurements, and quantity. A person reviews every request; nothing is a commitment until Chris confirms it.

@@ -1,0 +1,128 @@
+/* Pollard's Precision Parts — site styles (Montserrat + Libre Baskerville via Google Fonts) */
+
+:root{
+  --ink:#1c2333; --grey:#5a6275; --accent:#e2531b; --accent-dark:#c4440f;
+  --tint:#fbe7de; --line:#e3e5e9; --paper:#f7f7f5; --white:#fff;
+  --sans:"Montserrat",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --serif:"Libre Baskerville",Georgia,serif;
+  --wrap:1080px; --pad:clamp(20px,5vw,40px); --radius:14px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased}
+body{margin:0;font-family:var(--sans);font-size:17px;line-height:1.6;color:var(--ink);background:var(--white)}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+p{margin:0 0 1em}
+h1,h2,h3{text-wrap:balance;margin:0;line-height:1.1;letter-spacing:-.02em;font-weight:800}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--pad)}
+.kicker{font-size:12.5px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--grey);margin:0 0 18px}
+.kicker.accent{color:var(--accent)}
+
+/* Header */
+.site-header{border-bottom:1px solid var(--line)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:24px;height:76px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand img{width:30px;height:30px}
+.brand span{font-weight:800;font-size:15px;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap}
+.nav{display:flex;align-items:center;gap:28px}
+.nav a{font-size:15px;font-weight:600;text-decoration:none;color:var(--grey);transition:color .15s}
+.nav a:hover,.nav a[aria-current=page]{color:var(--ink)}
+.nav a.nav-cta{color:var(--white);background:var(--ink);padding:10px 18px;border-radius:999px}
+.nav a.nav-cta:hover{background:var(--accent)}
+
+/* Buttons */
+.actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 26px;border-radius:999px;font-weight:800;font-size:16px;text-decoration:none;transition:background .15s,color .15s,border-color .15s}
+.btn-primary{background:var(--accent);color:var(--white)}
+.btn-primary:hover{background:var(--accent-dark)}
+.btn-ghost{border:2px solid var(--line);color:var(--ink)}
+.btn-ghost:hover{border-color:var(--ink)}
+
+/* Hero */
+.hero{padding:clamp(56px,9vw,104px) 0 clamp(56px,8vw,96px)}
+.hero-grid{display:grid;grid-template-columns:1.45fr 1fr;align-items:center;gap:clamp(24px,5vw,64px)}
+.hero h1{font-size:clamp(40px,6.4vw,70px)}
+.hero h1 span{display:block}
+.hero h1 em{font-style:normal;color:var(--accent);display:block;margin-top:.08em}
+.lead{text-wrap:pretty;font-size:clamp(17px,1.9vw,19px);color:var(--grey);max-width:34em;margin:26px 0 0}
+.hero-art{justify-self:end;width:100%;max-width:360px}
+
+/* Sections */
+section{padding:clamp(56px,8vw,96px) 0}
+.band{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.section-head{display:flex;align-items:baseline;justify-content:space-between;gap:24px;padding-bottom:18px;margin-bottom:36px;border-bottom:1px solid var(--line)}
+.section-head h2{font-size:clamp(28px,3.6vw,38px)}
+.section-head p{margin:0;color:var(--grey);font-size:15px}
+
+/* Check list grid */
+.checks{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:34px 40px}
+.checks li{display:grid;grid-template-columns:30px 1fr;column-gap:16px;align-items:start}
+.checks li::before{content:"";width:30px;height:30px;border-radius:50%;background:var(--accent) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6.5 12.4l3.6 3.6 7.4-7.6' fill='none' stroke='%23fff' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/20px no-repeat;grid-row:span 2;margin-top:1px}
+.checks h3{font-size:18px;font-weight:800;letter-spacing:-.01em;line-height:1.35}
+.checks p{margin:2px 0 0;color:var(--grey);font-size:15.5px}
+
+/* Signature quote (classic flyer) */
+.quote{max-width:720px;margin:0 auto;text-align:center;border:2px solid var(--ink);border-radius:var(--radius);padding:clamp(34px,5vw,52px) var(--pad);background:var(--white)}
+.quote h2{font-family:var(--serif);font-weight:700;font-size:clamp(26px,3.4vw,34px);letter-spacing:-.01em}
+.quote p{text-wrap:balance;font-family:var(--serif);font-style:italic;color:var(--grey);font-size:clamp(17px,2vw,19px);margin:14px 0 0}
+.quote .actions{justify-content:center;margin-top:30px}
+.quote-mail{display:inline-block;margin-top:26px;font-weight:800;font-size:clamp(16px,2vw,19px);color:var(--accent);text-decoration:none;border-bottom:2px solid var(--tint);padding-bottom:2px;transition:border-color .15s}
+.quote-mail:hover{border-color:var(--accent)}
+
+/* Steps / cards */
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:28px}
+.card h3{font-size:19px;font-weight:800;letter-spacing:-.01em;margin-bottom:8px}
+.card p{margin:0;color:var(--grey);font-size:15.5px}
+.num{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;background:var(--tint);color:var(--accent);font-weight:800;margin-bottom:18px}
+.tag{display:inline-block;font-weight:800;font-size:22px;letter-spacing:.02em;color:var(--accent);margin-bottom:6px}
+.note{margin:32px 0 0;color:var(--grey);font-size:15.5px;text-align:center}
+
+/* Page hero */
+.page-hero{padding:clamp(48px,7vw,80px) 0 0}
+.page-hero h1{font-size:clamp(36px,5vw,54px)}
+.page-hero .lead{text-wrap:pretty;margin-top:18px}
+.page-hero.solo{padding-bottom:clamp(56px,8vw,96px)}
+.flush{margin:0}
+.section-head.tight{margin-bottom:8px}
+
+/* Contact */
+.contact-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(24px,4vw,48px);align-items:stretch}
+.email-card{background:var(--ink);color:var(--white);border-radius:var(--radius);padding:clamp(30px,4vw,44px);display:flex;flex-direction:column;justify-content:center;gap:30px}
+.email-card .kicker{color:#aab0bf;margin-bottom:10px}
+.email-card a.addr{font-size:clamp(17px,1.9vw,20px);font-weight:800;text-decoration:none}
+.email-card a.addr:hover{color:var(--tint)}
+.include{list-style:none;margin:0;padding:0}
+.include li{padding:14px 0;border-bottom:1px solid var(--line);display:flex;gap:14px;font-size:16px}
+.include li:last-child{border-bottom:0}
+.include b{color:var(--accent);font-weight:800;min-width:1.4em}
+
+/* Footer */
+.site-footer{border-top:1px solid var(--line);padding:34px 0;font-size:14.5px;color:var(--grey)}
+.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:16px 32px;flex-wrap:wrap}
+.site-footer .brand span{font-size:13px;color:var(--ink)}
+.site-footer .brand img{width:24px;height:24px}
+.site-footer a{text-decoration:none}
+.site-footer a:hover{color:var(--accent)}
+
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+
+/* Tablet */
+@media (max-width:900px){
+  .checks{grid-template-columns:repeat(2,1fr)}
+  .grid-4{grid-template-columns:repeat(2,1fr)}
+}
+/* Phone */
+@media (max-width:720px){
+  body{font-size:16px}
+  .header-inner{height:auto;padding-top:16px;padding-bottom:16px;flex-direction:column;gap:12px}
+  .nav{gap:22px}
+  .hero-grid,.contact-grid,.grid-3{grid-template-columns:1fr}
+  .hero-art{display:none}
+  .checks{grid-template-columns:1fr;gap:24px}
+  .section-head{flex-direction:column;gap:6px}
+  .actions .btn{flex:1 1 100%}
+  .footer-inner{flex-direction:column;text-align:center}
+}
+@media (max-width:420px){ .grid-4{grid-template-columns:1fr} }
